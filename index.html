@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>遊戲介紹 - Rebound</title>
+
+<style>
+
+/* ===== 基礎設定 ===== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f7f7f7;
+  color: #333;
+  line-height: 1.8;
+  padding-top: 110px;
+}
+
+/* ===== Header ===== */
+.norstar-header {
+  width: 100%;
+  background-color: #20cdcd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 5%;
+  box-sizing: border-box;
+
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+/* Logo */
+.header-logo {
+  height: 70px;
+}
+
+/* 電腦版按鈕 */
+.header-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.nav-btn,
+.shop-btn {
+  height: 45px;
+  padding: 0 18px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  transition: 0.2s;
+}
+
+.shop-btn {
+  background: #F94F30;
+  color: #fff;
+}
+
+.nav-btn-img {
+  width: 90px;
+  padding: 0;
+}
+
+.nav-btn-img img {
+  width: 80%;
+}
+
+/* ===== 手機漢堡按鈕 ===== */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 手機下拉選單 */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease;
+}
+
+.mobile-menu a {
+  padding: 14px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.mobile-menu a:hover {
+  background: #f5f5f5;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== 手機版 ===== */
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 80px;
+  }
+
+  .header-buttons {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- ----------------------------上面紅色底------------------------- -->
+<header class="norstar-header">
+
+  <a href="#">
+    <img src="image/title.png" class="header-logo">
+  </a>
+
+  <!-- 電腦版按鈕 -->
+  <div class="header-buttons">
+    <a href="遊戲教程.html" class="nav-btn">🛠 遊戲教程</a>
+
+  </div>
+
+  <!-- 手機漢堡按鈕 -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <!-- 手機下拉選單 -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="遊戲教程.html">🛠 遊戲教程</a>
+    
+  </div>
+
+</header>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+}
+</script>
+<!-- ----------------------------上面紅色底------------------------- -->
+
+
+<div style="text-align: center;">
+  <img src="image/主題圖片.png" alt="主題圖片" style="max-width: 60%; height: auto;">
+</div>
+<h1 style="text-align: center; font-size: 36px; font-weight: bold; margin-bottom: 20px;">
+  遊戲介紹 《彈彈塔防：機甲守衛戰》
+</h1>
+
+<p style="text-align: center; font-size: 22px; line-height: 1.6; max-width: 90%; margin: 0 auto;">
+  突變的怪物自天而降，人類的最後庇護所──地下洞穴基地岌岌可危。<br>
+  身為指揮官，你將操控機器人，運用無人機建造防線，抵禦無數來襲的敵人，<br>
+  用智慧與火力，將牠們全部【彈】出戰場！
+</p>
+
+<div style="text-align: center; padding: 20px; font-family: sans-serif;">
+  
+  <h2 style="font-size: 32px; color: #ffcc00; background-color: #333; display: inline-block; padding: 10px 30px; border-radius: 50px; margin-bottom: 30px;">
+    【 遊戲特色 】
+  </h2>
+
+  <div style="text-align: left; max-width: 600px; margin: 0 auto; line-height: 1.8;">
+    
+    <div style="margin-bottom: 25px;">
+      <h3 style="font-size: 26px; color: #d32f2f; margin-bottom: 8px;">🧨 創新融合玩法</h3>
+      <p style="font-size: 20px; color: #444; margin: 0;">彈珠 × 建造 × 橫向射擊：像玩彈珠台一樣，自由建造地形，改變怪物的下落軌跡，打造屬於你的防禦迷宮。</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="font-size: 26px; color: #1976d2; margin-bottom: 8px;">⚔️ 物理碰撞爽感</h3>
+      <p style="font-size: 20px; color: #444; margin: 0;">使用強力的槍械、刀片、槍塔等裝備，擊退擁有彈珠物理特性的敵人，享受擊飛爽感！</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="font-size: 26px; color: #388e3c; margin-bottom: 8px;">🕹️ 全方位精準射擊</h3>
+      <p style="font-size: 20px; color: #444; margin: 0;">主角不只左右移動，還能透過搖桿調整射擊方向，精準掃射每個角落。</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="font-size: 26px; color: #7b1fa2; margin-bottom: 8px;">🚀 VIP 專屬重力控制</h3>
+      <p style="font-size: 20px; color: #444; margin: 0;">解鎖 VIP 後重力可以調整，享受輕飄飄以及重力加速度的快感！</p>
+    </div>
+
+    <div style="margin-bottom: 25px;">
+      <h3 style="font-size: 26px; color: #f57c00; margin-bottom: 8px;">🗺️ 千變萬化的關卡</h3>
+      <p style="font-size: 20px; color: #444; margin: 0;">關卡地形千變萬化，建造策略百玩不膩，帶來持久的樂趣與挑戰！</p>
+    </div>
+
+  </div>
+
+  <div style="margin-top: 40px; padding: 20px; border-top: 2px dashed #ccc;">
+    <p style="font-size: 24px; font-weight: bold; color: #333;">打造防線，保衛人類最後的希望。</p>
+    <p style="font-size: 28px; font-weight: bold; color: #d32f2f; text-shadow: 1px 1px 2px #ccc;">
+      現在就加入《彈彈塔防》，將所有敵人一彈擊潰！
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
